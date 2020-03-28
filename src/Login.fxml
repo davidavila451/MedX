@@ -1,8 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml/1">
-	<!-- TODO Add Nodes -->
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.controller.LoginController.LoginController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text layoutX="234.0" layoutY="165.0" scaleX="8.56523880855195" scaleY="9.019579011455784" strokeType="OUTSIDE" strokeWidth="0.0" text="MedX" />
+    <PasswordField fx:id="password" layoutX="150.0" layoutY="400.0" onAction="#handle" prefWidth="200.0" />
+    <TextField fx:id="username" layoutX="150.0" layoutY="353.0" onAction="#handle" prefWidth="200.0" />
+    <Text layoutX="75.0" layoutY="368.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:">
+      <font>
+        <Font size="14.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="79.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
+    <Text fx:id="create" fill="RED" font="$x1" layoutX="193.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Account" underline="true" />
+    <Button fx:id="login" font="$x1" layoutX="204.0" layoutY="514.0" mnemonicParsing="false" onAction="#handle" prefHeight="40.0" prefWidth="91.0" text="Login" />
+  </children>
 </AnchorPane>
-
