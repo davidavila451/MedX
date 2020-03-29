@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.controller.LocationController.LocationController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <ImageView fx:id="map" fitHeight="352.99998415970254" fitWidth="470.6666564941406" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true" />
+    <Button fx:id="con" layoutX="197.0" layoutY="742.0" mnemonicParsing="false" onAction="#handle" text="Confirm">
+      <font>
+        <Font size="20.0" />
+      </font>
+    </Button>
+    <TableView fx:id="list" layoutX="14.0" layoutY="414.0" prefHeight="302.0" prefWidth="471.0">
+      <columns>
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="190.0" text="Name" fx:id="name" />
+        <TableColumn prefWidth="75.0" text="Wait Time" fx:id="time" />
+        <TableColumn maxWidth="5000.0" minWidth="10.0" prefWidth="205.0" text="Accepted Insurance" fx:id="insurance" />
+      </columns>
+    </TableView>
+    <RadioButton fx:id="filter" layoutX="14.0" layoutY="384.0" mnemonicParsing="false" onMouseClicked="#filterHandle" text="Filter Only Accepted Insurance" />
+  </children>
+</AnchorPane>

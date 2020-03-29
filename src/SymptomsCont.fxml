@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.controller.SymptomController.SymptomContController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text layoutX="177.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms Cont." underline="true">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Text>
+    <TextArea fx:id="desc" layoutX="50.0" layoutY="70.0" prefHeight="248.0" prefWidth="414.0" wrapText="true" />
+    <Text layoutX="122.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please tell us more about your symptoms">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Text>
+    <Button fx:id="cont" font="$x1" layoutX="193.0" layoutY="629.0" mnemonicParsing="false" onAction="#handle" text="Continue" />
+  </children>
+</AnchorPane>

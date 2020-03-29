@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.controller.SymptomController.SymptomController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text layoutX="203.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Symptoms" underline="true">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text layoutX="161.0" layoutY="56.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select your symptoms">
+      <font>
+        <Font size="14.0" />
+      </font>
+    </Text>
+    <CheckBox fx:id="illness" font="$x1" layoutX="35.0" layoutY="75.0" mnemonicParsing="false" text="Illness" />
+    <CheckBox fx:id="skin" font="$x1" layoutX="35.0" layoutY="125.0" mnemonicParsing="false" text="Skin/Hair" />
+    <CheckBox fx:id="injury" font="$x1" layoutX="35.0" layoutY="175.0" mnemonicParsing="false" text="Injury" />
+    <CheckBox fx:id="lab" font="$x1" layoutX="35.0" layoutY="225.0" mnemonicParsing="false" text="Labwork" />
+    <CheckBox fx:id="immune" font="$x1" layoutX="35.0" layoutY="275.0" mnemonicParsing="false" text="Immunization" />
+    <CheckBox fx:id="TB" font="$x1" layoutX="35.0" layoutY="325.0" mnemonicParsing="false" text="TB (Testing / Reading)" />
+    <CheckBox id="Physical" fx:id="physical" font="$x1" layoutX="35.0" layoutY="375.0" mnemonicParsing="false" text="Physical Exam" />
+    <CheckBox id="Travel" fx:id="travel" font="$x1" layoutX="35.0" layoutY="425.0" mnemonicParsing="false" text="International Travel" />
+    <CheckBox fx:id="refill" font="$x1" layoutX="35.0" layoutY="475.0" mnemonicParsing="false" text="One Time Refill" />
+    <CheckBox fx:id="staple" font="$x1" layoutX="35.0" layoutY="525.0" mnemonicParsing="false" text="Suture/Staple Removal" />
+    <CheckBox fx:id="smoking" font="$x1" layoutX="35.0" layoutY="575.0" mnemonicParsing="false" text="Stop Smoking/Tobacco Use" />
+    <CheckBox fx:id="cosmetic" font="$x1" layoutX="35.0" layoutY="625.0" mnemonicParsing="false" text="Cosmetic Services" />
+    <Button fx:id="cont" font="$x1" layoutX="359.0" layoutY="627.0" mnemonicParsing="false" onAction="#handle" text="Continue" />
+  </children>
+</AnchorPane>

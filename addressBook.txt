@@ -1,0 +1,9 @@
+Baylor Scott & White Emergency Room,15,CVS/Humana/Wellcare/Metropolitan,Emergency
+Five Star ER,5,CVS/Humana/UnitedHealth,Emergency
+Family Emergency Room,20,Anthem Inc./Wellcare/Humana/UnitedHealth,Emergency
+Express MD Urgent Care,2,Anthem Inc./CVS/Humana/Wellcare,Urgent
+Urgent Care for Kids,15,CVS/Humana/Metropolitan,Urgent
+CareNow Urgent Care,10,CVS/Metropolitan/Wellcare,Urgent
+MinuteClinic,15,CVS/Metropolitan/Wellcare,Clinic
+Austin Regional Clinic,2,CVS/Wellcare/UnitedHealth,Clinic
+Baylor Scott & White Clinic,10,CVS/Humana/UnitedHealth,Clinic

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="800.0" prefWidth="500.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="application.controller.SelectionController.SelectionController">
+  <!-- TODO Add Nodes -->
+  <children>
+    <Text layoutX="81.0" layoutY="83.0" smooth="true" strikethrough="false" strokeType="OUTSIDE" strokeWidth="0.0" text="Please select what you are looking for:" textAlignment="CENTER">
+      <font>
+        <Font size="20.0" fx:id="x1" />
+      </font>
+    </Text>
+    <Text font="$x1" layoutX="87.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Usually 8am-8pm&#10;-Covers flu and common cold&#10;-Immunizations&#10;-Fever, headaches, cough , sneezin , and chills&#10;-Sprains&#10;-Affordable" />
+    <Text font="$x1" layoutX="87.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-24 hrs&#10;-Covers same conditions as Clinic&#10;-A little more costly than clinics&#10;-For urgent problems that are not severe" />
+    <Text font="$x1" layoutX="87.0" layoutY="548.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-Major Trauma or Accident&#10;-Loss of Consciousness&#10;-Heart Attack or Chest Pain&#10;-Uncontrollable Bleeding" />
+    <RadioButton fx:id="clinic" font="$x1" layoutX="57.0" layoutY="103.0" mnemonicParsing="false" onMouseClicked="#ClinicRadio" text="Clinic:" />
+    <RadioButton fx:id="urgentCare" font="$x1" layoutX="57.0" layoutY="325.0" mnemonicParsing="false" onMouseClicked="#UrgentRadio" text="Urgency Care:" />
+    <RadioButton fx:id="Emergency" font="$x1" layoutX="57.0" layoutY="499.0" mnemonicParsing="false" onMouseClicked="#EmergencyRadio" text="Emergency Room:" />
+    <Button fx:id="cont" font="$x1" layoutX="193.0" layoutY="708.0" mnemonicParsing="false" onAction="#handle" text="Continue" />
+  </children>
+</AnchorPane>
