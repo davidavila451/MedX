@@ -1,5 +1,7 @@
 package application.Main;
 
+import application.model.AddressBook.Address;
+import application.model.UserInfo.UserInfo;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -15,6 +17,8 @@ import javafx.stage.Stage;
 
 public class Main extends Application{
 	public static Stage stage;
+	public static UserInfo user = new UserInfo();
+	public static Address address = new Address("", "", null, "");
 	@Override
 	public void start(Stage primaryStage) {
 		stage = primaryStage;

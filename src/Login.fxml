@@ -18,7 +18,8 @@
       </font>
     </Text>
     <Text font="$x1" layoutX="79.0" layoutY="415.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" />
-    <Text fx:id="create" fill="RED" font="$x1" layoutX="193.0" layoutY="467.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Account" underline="true" />
+    <Text fx:id="create" fill="RED" font="$x1" layoutX="193.0" layoutY="467.0" onMouseClicked="#createAccount" strokeType="OUTSIDE" strokeWidth="0.0" text="Create an Account" underline="true" />
     <Button fx:id="login" font="$x1" layoutX="204.0" layoutY="514.0" mnemonicParsing="false" onAction="#handle" prefHeight="40.0" prefWidth="91.0" text="Login" />
+    <Text fx:id="text" layoutX="236.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="" />
   </children>
 </AnchorPane>

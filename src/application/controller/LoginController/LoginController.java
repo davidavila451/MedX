@@ -5,6 +5,7 @@ import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 import application.Main.Main;
+import application.model.UserInfo.UserInfo;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,6 +14,10 @@ import javafx.scene.control.Button;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontPosture;
+import javafx.scene.text.FontWeight;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -26,10 +31,14 @@ import javafx.stage.Stage;
 public class LoginController {
 	
 	Stage primaryStage = new Stage();
+	
+	
 	@FXML Button login;
 	@FXML TextField username;
 	@FXML PasswordField password;
 	@FXML Text create;
+	@FXML Text text;
+	UserInfo u = Main.user;
 	
 	@FXML
 	public void handle(ActionEvent event) throws FileNotFoundException {
@@ -39,19 +48,45 @@ public class LoginController {
 		 *If the user clicks the login button check the login info then change the scene
 		 *to the Selection scene for doctor, urgency care, and hospital. 
 		 */
+		
 		if(login.getId().equals("login")) {
 			String user=username.getText();
 			String pass=password.getText();
 			int result=runVerification(user, pass);
-			try {
-				FXMLLoader loader = new FXMLLoader();
-				loader.setLocation(LoginController.class.getResource("/Selection.fxml"));
-				AnchorPane layout = (AnchorPane) loader.load();
-				Scene scene = new Scene(layout);
-				Main.stage.setScene(scene);
-			} catch(Exception e) {
-				e.printStackTrace();
+			switch(result) {
+			case 11:
+				u.setUserName(user);
+				try {
+					FXMLLoader loader = new FXMLLoader();
+					loader.setLocation(LoginController.class.getResource("/Selection.fxml"));
+					AnchorPane layout = (AnchorPane) loader.load();
+					Scene scene = new Scene(layout);
+					Main.stage.setScene(scene);
+				} catch(Exception e) {
+					e.printStackTrace();
+				}
+				break;
+			default:
+				text.setText("Incorrect Username or Password");
+				text.setFill(Color.RED);
+				text.setFont(Font.font("system",FontWeight.NORMAL, FontPosture.REGULAR,14.0));
+				text.setLayoutY(467.0);
+				text.setLayoutX(150.0);
+				create.setLayoutY(490.0);
+				break;
 			}
+		}
+	}
+	
+	public void createAccount() {
+		try {
+			FXMLLoader loader = new FXMLLoader();
+			loader.setLocation(LoginController.class.getResource("/Registration.fxml"));
+			AnchorPane layout = (AnchorPane) loader.load();
+			Scene scene = new Scene(layout);
+			Main.stage.setScene(scene);
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 
@@ -65,7 +100,7 @@ public class LoginController {
 	private int runVerification(String user, String pass) throws FileNotFoundException {
 		//Initiate the scanner that scans our account "database".
 		int result=0;
-		Scanner scanner = new Scanner(new File("/accounts.txt"));
+		Scanner scanner = new Scanner(new File("accounts.txt"));
 		
 		//While going through the lines of accounts, tokenize them
 		//and check the username first then password.
@@ -76,11 +111,15 @@ public class LoginController {
 			String bufferB = tokens[1];
 			//If the username is good, check password. Assign result
 			//then return
-			if(user==bufferA) {
-				if(pass==bufferB) {
+			if(user.equals(bufferA)) {
+				if(pass.equals(bufferB)) {
 					result=11;
+					scanner.close();
+					return result;
 				}
 				result=10;
+				scanner.close();
+				return result;
 			}
 		}
 		//Close the scanner and return the result
